@@ -158,7 +158,7 @@ main {
 
 
 /*smaller than default width*/
-@media (max-width: 1150px) {
+@media (max-width: 1160px) {
     nav li a {font-size: 1.5rem;}
 }
 @media (max-width: 1060px) {
