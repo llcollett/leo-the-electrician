@@ -242,7 +242,7 @@ main {
     main {top: 12rem;}
 }
 
-@media only screen and (min-width: 500px) and (max-width: 580px) {
+@media only screen and (min-width: 300px) and (max-width: 580px) {
     header {height: 12rem;}
     .header-content {
         display: flex;
