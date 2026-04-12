@@ -12,7 +12,8 @@ html, body {
 /* fonts and text */
 h1 {
     font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
-    font-size: 3rem;
+    font-size: 2.25rem;
+    font-weight: bold;
     color: white;
 }
 h2, h3, p {
@@ -42,6 +43,8 @@ img {
 }
 
 /* header */
+
+/* header general */
 header {
     left: 0; right: 0; top: 0;
     margin: 0; padding: 0;
@@ -55,36 +58,37 @@ header {
     justify-content: center;
     align-items: center;
 }
-header .header-content {
-    margin: 0; padding: 0;
-    height: 90%; 
+.header-content {
     width: 98%;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
-    background-color: transparent;
 }
-header h1, nav, nav li {
+
+/* logo */
+.logo img {
+    height: 5rem;
+}
+
+/* name */
+.name {
     margin: 0; padding: 0;
+    display: flex;
 }
-nav li {
-    display: inline-flex;
-}
-header h1 a {
-    color: white;
-}
-nav li a {
+
+/* navigator */
+.navigator a {
     font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: white;
     background-color: #fe9929;
     border: 0.25rem solid white;
     border-radius: 0.25rem;
-    margin: 0.25rem;
+    margin: 0.5rem;
     padding: 0.5rem;
 }
-nav li a:hover {
+.navigator a:hover {
     background-color: #fed98e;
 }
 #here {
@@ -95,12 +99,28 @@ nav li a:hover {
     cursor: default;
 }
 
+/* contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.contact a {
+    padding: 0.5rem;
+    font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+
 /* generic main */
 main {
     top: 6.5rem;
     position: absolute;
 }
-.home, .about, .portfolio, .testimonials, .contact {
+.home, .about, .portfolio, .testimonials {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -109,7 +129,7 @@ main {
 
 /* generic content blocks */
 .home-content, .about-content, .portfolio-content, 
-.testimonials-content, .contact-content {
+.testimonials-content {
     width: 98%;
 }
 .about-content, .portfolio-images, .quote-block {
@@ -136,24 +156,8 @@ main {
     border-radius: 0.25rem;
 }
 
-/* contact */
-.contact p {
-    margin: 0; padding: 0;
-}
-.phone, .email {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.contact-content a {
-    color: black;
-}
-#contact-icon {
-    font-size: 4rem;
-}
-#link {
-    padding: 0 1rem;
-}
+
+
 
 
 
