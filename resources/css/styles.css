@@ -218,7 +218,7 @@ main {
     }
     main {top: 16rem;}
 }
-@media only screen and (min-width: 300px) and (max-width: 580px) {
+@media only screen and (min-width: 200px) and (max-width: 580px) {
     header {height: 12rem;}
     .header-content {
         display: flex;
@@ -240,13 +240,6 @@ main {
     }
     .contact a {font-size: 1rem;}
     main {top: 12rem;}
-}
-
-
-/*smaller than default height but only if not smaller than smallest specified width*/
-@media (max-height: 696px) and (min-width: 430px) {
-
-
 }
 
 /*larger*/
