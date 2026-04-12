@@ -218,7 +218,7 @@ main {
     }
     main {top: 16rem;}
 }
-@media only screen and (min-width: 500px) and (max-width: 580px) {
+@media only screen and (min-width: 300px) and (max-width: 580px) {
     header {height: 12rem;}
     .header-content {
         display: flex;
@@ -242,30 +242,6 @@ main {
     main {top: 12rem;}
 }
 
-@media only screen and (min-width: 300px) and (max-width: 580px) {
-    header {height: 12rem;}
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 0.5rem;
-    }
-    .logo img {
-        height: 3rem; 
-        margin-top: 1rem; 
-        margin-bottom: -0.1rem;
-    }
-    h1 {font-size: 1.5rem;}
-    .navigator a {font-size: 1rem;}
-    .contact {
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: row;
-    }
-    .contact a {font-size: 0.75rem;}
-    main {top: 12rem;}
-}
 
 /*smaller than default height but only if not smaller than smallest specified width*/
 @media (max-height: 696px) and (min-width: 430px) {
