@@ -10,25 +10,6 @@ html, body {
 }
 
 /* fonts and text */
-h1 {
-    font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
-    font-size: 2.25rem;
-    font-weight: bold;
-    color: white;
-}
-h2, h3, p {
-    font-family: 'Datatype', Arial, Helvetica, sans-serif;
-    color: black;
-}
-h2 {
-    font-size: 1.5rem;
-}
-h3 {
-    font-size: 1.25rem;
-}
-p {
-    font-size: 1rem;
-}
 #no-lower {
     text-transform: none;
 }
@@ -36,51 +17,52 @@ a {
     text-decoration: none;
 }
 
-/* other generic */
-img {
-    height: 16rem;
-    width: auto;
-}
+/* default screen size is mobile at 400px wide
+   media queries at bottom of file, screen size
+   increases, with some adjustments for screen
+   size smaller than 400px */
 
 /* header */
 
 /* header general */
+header, .header-content, .logo-name, .logo, .name,
+.navigator, .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content, .logo-name, .contact {
+    flex-direction: column;
+}
 header {
     left: 0; right: 0; top: 0;
     margin: 0; padding: 0;
-    height: 6rem;
+    height: 16rem;
     width: 100%;
     z-index: 10;
     position: fixed;
     background-color: #cc4c02;
     border-bottom: 0.5rem solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .header-content {
     width: 98%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
-/* logo */
+/* logo and name */
 .logo img {
-    height: 5rem;
+    height: 3rem;
 }
-
-/* name */
-.name {
-    margin: 0; padding: 0;
-    display: flex;
+.name h1 {
+    font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
 }
-
 /* navigator */
 .navigator a {
     font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: white;
     background-color: #fe9929;
     border: 0.25rem solid white;
@@ -98,13 +80,7 @@ header {
 #here:hover {
     cursor: default;
 }
-
 /* contact */
-.contact {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-}
 .contact a {
     padding: 0.5rem;
     font-family: 'Major Mono Display', Arial, Helvetica, sans-serif;
@@ -115,10 +91,26 @@ header {
 
 
 
+
+
 /* generic main */
 main {
-    top: 6.5rem;
+    top: 16rem;
     position: absolute;
+}
+main img {
+    height: 16rem;
+    width: auto;
+}
+h2, p {
+    font-family: 'Datatype', Arial, Helvetica, sans-serif;
+    color: black;
+}
+h2 {
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1rem;
 }
 .home, .about, .portfolio, .testimonials {
     width: 100%;
@@ -157,92 +149,48 @@ main {
 }
 
 
-
-
-
-
-/*smaller than default width*/
-@media only screen and (min-width: 1050px) and (max-width: 1250px) {
-    h1 {font-size: 1.75rem;}
-    .navigator a {font-size: 1.25rem;}
-    .contact a {font-size: 0.75rem;}
-}
-@media only screen and (min-width: 980px) and (max-width: 1050px) {
-    h1 {font-size: 1.5rem;}
-    .navigator a {font-size: 1rem;}
-    .contact a {font-size: 0.7rem;}
-}
-@media only screen and (min-width: 900px) and (max-width: 980px) {
-    header {height: 10rem;}
-    h1 {font-size: 2.5rem;}
-    .navigator a {
-        font-size: 1.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-    .contact a {font-size: 1rem;}
-    main {top: 10rem;}
-    img {height: 12rem; width: auto;}
-}
-@media only screen and (min-width: 720px) and (max-width: 900px) {
-    header {height: 10rem;}
-    h1 {font-size: 2rem;}
-    .navigator a {
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-    }
-    .contact a {font-size: 0.75rem;}
-    main {top: 10rem;}
-    img {height: 12rem; width: auto;}
-}
-@media only screen and (min-width: 580px) and (max-width: 720px) {
-    header {height: 16rem;}
-    .header-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 0.75rem;
-    }
-    h1 {font-size: 2rem;}
-    .logo img {
-        height: 4rem; 
-        margin-top: 1rem; 
-        margin-bottom: -1rem;
-    }
-    .contact {
-        padding: 0.5rem;
-        display: flex;
+/* larger when logo can sit beside name */
+@media only screen and (min-width: 500px) {
+    .logo-name {
         flex-direction: row;
+        column-gap: 1rem;
     }
-    main {top: 16rem;}
+    header {height: 13rem;}
+    main {
+        top: 13rem;
+        position: absolute;
+    }
 }
-@media only screen and (min-width: 200px) and (max-width: 580px) {
-    header {height: 12rem;}
+
+/* larger when whole lot can go horizontal */
+@media only screen and (min-width: 1000px) {
+    header {height: 9.5rem;}
     .header-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 0.5rem;
-    }
-    h1 {margin-top: 0; font-size: 1.5rem;}
-    .logo img {
-        height: 3rem; 
-        margin-top: 1rem; 
-    }
-    .navigator a {font-size: 1.25rem;}
-    .contact {
-        padding: 0.5rem;
-        display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
-    .contact a {font-size: 1rem;}
-    main {top: 12rem;}
+    .navigator {flex-direction: column;}
+    main {
+        top: 9.5rem;
+        position: absolute;
+    }
+    h2 {font-size: 1.75rem;}
+    p {font-size: 1.25rem;}
 }
-
-/*larger*/
-@media (min-width: 1250px) {
-
+@media only screen and (min-width: 1200px) {
+    header {height: 7rem;}
+    .name h1 {font-size: 2rem;}
+    .navigator {flex-direction: row;}
+    .navigator a {font-size: 1.75rem;}
+    .contact a {font-size: 1.25rem}
+    main {
+        top: 7rem;
+        position: absolute;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .logo img {height: 5rem;}
+    .name h1 {font-size: 3rem;}
+    h2 {font-size: 2rem;}
+    p {font-size: 1.5rem;}
 }
